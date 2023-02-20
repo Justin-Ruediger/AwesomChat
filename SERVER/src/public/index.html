@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mein Server</title>
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/app.js"></script>
+
+    <div id="login-bg">
+        <div id="login-card" class="login-card">
+            <h2>Login</h2>
+            <div class="divider"></div>
+            <input id="username" class="input-field" type="text" placeholder="USERNAME" required>
+            <input id="login-btn" class="login-button" type="button" value="Login" onclick="login()">
+        </div>
+    </div>
+    <div id="main-bg">
+        <div id="chat-card" class="card">
+            <div id="messages-list" class="messages-list">
+                <!--Message List-->
+            </div>
+            <div id = "sendMessage">
+                <input id="message" class="input-field" type="text" placeholder="Message" required>
+                <input id="send-btn" class="send-button" type="button" value="send" onclick="send()">
+            </div>
+        </div>
+
+        <div id="users-card" class="card"></div>
+</body>
+
+</html>
