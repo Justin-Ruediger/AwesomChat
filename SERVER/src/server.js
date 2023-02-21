@@ -34,8 +34,8 @@ io.on('connection', socket => {
         }
     })
     socket.on('message', msg => {
+        let i = socketList.findIndex(element => element[1] == socket.id);
         if (!socketList[i][0]) {
-            let i = socketList.findIndex(element => element[1] == socket.id);
             console.log("msg: " + msg);
             io.emit('messageback', [socketList[i][0], msg]);
             //socket.emit('message', 'COnnection Accepted');
